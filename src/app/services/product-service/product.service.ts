@@ -42,7 +42,6 @@ export class ProductService {
   getProducts(){
     return this.http.get<any>("https://fakestoreapi.com/products")
     .pipe(map((res:any)=>{
-      console.log(res);
       this.products = res;
       return res;
     }))
